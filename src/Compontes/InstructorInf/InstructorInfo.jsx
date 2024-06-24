@@ -171,14 +171,14 @@ const InstructorInfo = () => {
                                   <h2> Name: {item.name}</h2>
                                   <Link
                                     className="text-decoration-none"
-                                    to="/coursedetails"
+                                   to={`/coursedetails/${item.id}`}
                                   >
                                     <p className="p-catogry">
                                       overView: {item.overView}
                                     </p>
                                   </Link>
                                   <div className="d-flex align-items-center gap-3 justify-content-center icons-catogry">
-                                    <FaBook size={25} /> <h5>35 Classes</h5>
+                                    <FaBook size={25} /> <h5>{item.lessons} Classes</h5>
                                   </div>
                                   <div className="d-flex align-items-center justify-content-between">
                                     <div className="d-flex align-items-center gap-2">

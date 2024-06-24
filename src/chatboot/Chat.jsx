@@ -26,7 +26,7 @@ const Chatbott = () => {
           </div>
         )}
         <button className="chatbot-toggle-button" onClick={handleToggleChatbot}>
-          <IoLogoWechat size={38} />
+          <IoLogoWechat size={45} />
         </button>
       </div>
     </div>

@@ -154,13 +154,16 @@ export const Courses = () => {
                           <Link to={`/coursedetails/${item.id}`}>
                             <img src={c5} alt="" className="w-100" />
                           </Link>
-                          <p className="mt-1 fw-bold position-absolute end-0 text-info">
+                          <p className="mt-1 fw-bold position-absolute end-0 text-info  ">
                             {item.price} $
                           </p>
                         </div>
 
-                        <div className="free__course__details">
-                          <h5 className="my-3 fw-medium"> Name: {item.name}</h5>
+                        <div className="free__course__details p-1 ">
+                          <h5 className="my-3 ">
+                            {" "}
+                            Name : <span className="fw-light">{item.name}</span>
+                          </h5>
                           <h6 className="fw-light">
                             {" "}
                             OverView: {item.overView}

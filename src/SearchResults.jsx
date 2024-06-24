@@ -7,6 +7,7 @@ import c5 from "./Images/new/contact.png";
 
 import { ToastContainer, toast } from "react-toastify";
 import a1 from "./Images/new/contact.png";
+import { MDBSpinner, MDBBtn } from "mdb-react-ui-kit";
 
 import { FaBook, FaStar } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
@@ -41,7 +42,18 @@ const SearchResults = () => {
         Search Results for <span className="text-info">"{query}"</span>
       </h1>
       {loading ? (
-        <p>Loading...</p>
+        <div className="d-flex justify-content-center align-items-center">
+          <MDBBtn disabled>
+            <MDBSpinner
+              grow
+              size="sm"
+              role="status"
+              tag="span"
+              className="me-2"
+            />
+            Loading.....
+          </MDBBtn>
+        </div>
       ) : (
         <div className="row gap-5 d-flex align-items-center justify-content-center">
           {results.map((item) => {
@@ -49,9 +61,8 @@ const SearchResults = () => {
               <Col lg="3" md="4" className="shadow-lg">
                 <div className="single__free__course">
                   <div className="free__course__img mb-3 mt-2">
-                    <Link to={`/coursedetails/${item.id}`}>
-                      <img src={c5} alt="" className="w-100" />
-                    </Link>
+                    <img src={c5} alt="" className="w-100" />
+
                     <p className="mt-1 fw-bold position-absolute end-0 text-info my-2">
                       {item.price} $
                     </p>
@@ -60,13 +71,13 @@ const SearchResults = () => {
                   <div className="free__course__details">
                     <div>
                       <div className="">
-                        <h4> course title :</h4>
-                        <p>{item.course_title}</p>
+                        <h5 className="fw-semibold"> course title :</h5>
+                        <p className="fw-light">{item.course_title}</p>
                       </div>
                       <h6> level : {item.level}</h6>
-                      <div className="d-flex gap-2">
+                      <div className=" ">
                         <h5> course_subject :</h5>
-                        <p>{item.subject}</p>
+                        <p className="fw-light">{item.subject}</p>
                       </div>
                     </div>
 
