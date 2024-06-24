@@ -144,12 +144,12 @@ const InstructorInfo = () => {
                     Progressively genera extensible e-services for.
                   </p>
                 </div>
-                <div className=" courses-info my-5   ">
+                <div className=" courses-info my-5 courses-infoo  ">
                   <h2>Courses :</h2>
                   <div>
                     <div className="container">
                       <Row>
-                        <div className="row gap-5 d-flex align-items-center justify-content-center my-5">
+                        <div className="row gap-5 d-flex align-items-center justify-content-center my-5 ">
                           {food_list.map((item) => {
                             return (
                               <Col

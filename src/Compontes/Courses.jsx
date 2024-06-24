@@ -122,7 +122,7 @@ export const Courses = () => {
               <div className="my-3 position-relative courses-cat">
                 <img src={c3} alt="" className="w-75" />
                 <div className="bg-light w-25 position-absolute my-1 px-1 mx-2 py-2 end-0 bottom-0 text-center text-courses  ">
-                  <h2>Graphic Design</h2>
+                  <h2>Python</h2>
                   <p>22 Courses</p>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export const Courses = () => {
               <div className="my-3 position-relative courses-cat">
                 <img src={c4} alt="" className="w-75" />
                 <div className="bg-light w-25 position-absolute my-1 px-1 mx-2 py-2 end-0 bottom-0 text-center text-courses  ">
-                  <h2>Graphic Design</h2>
+                  <h2>Back End </h2>
                   <p>44 Courses</p>
                 </div>
               </div>
@@ -160,8 +160,11 @@ export const Courses = () => {
                         </div>
 
                         <div className="free__course__details">
-                          <h6> Name: {item.name}</h6>
-                          <h6> OverView: {item.overView}</h6>
+                          <h5 className="my-3 fw-medium"> Name: {item.name}</h5>
+                          <h6 className="fw-light">
+                            {" "}
+                            OverView: {item.overView}
+                          </h6>
 
                           <div className=" d-flex align-items-center gap-5 justify-content-between mx-3">
                             <span className=" d-flex align-items-center gap-2">

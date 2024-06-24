@@ -108,7 +108,7 @@ export const Navbaar = () => {
                 </ul>
               </div>
               <div className="btn-en d-flex gap-4 align-items-center justify-content-center">
-                <div className="d-flex gap-4 mx-4 text-decoration-none">
+                <div className="d-flex gap-4 mx-4 text-decoration-none  icons-navv">
                   <div>
                     <div class="searchBox">
                       <input

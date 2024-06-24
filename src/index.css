@@ -87,7 +87,7 @@ body {
   .collapse {
     background-color: #5c8f91;
     border-radius: 25px;
-    height: 375px;
+    height: 410px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,6 +117,28 @@ body {
   .Courses-media {
     margin-left: 0px !important ;
     max-width: 380px;
+  }
+}
+
+@media (max-width: 550px) {
+  .card-prof {
+    display: flex;
+    flex-direction: column;
+    top: 18px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .icons-navv {
+    display: flex;
+    flex-direction: column;
+    /* top: 18px; */
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
   }
 }
 /* searchhhhhhhhhh */
@@ -1705,10 +1727,17 @@ ul {
 }
 @media (max-width: 600px) {
   .category-col {
-    height: 25%;
-    /* width: 126%; */
+    height: 17%;
+    width: 126%;
     display: flex;
     flex-direction: column;
+  }
+}
+@media (min-width: 777px) and (max-width: 1150px) {
+  .courses-infoo {
+    position: relative;
+    right: 414px;
+    top: 368px;
   }
 }
 
@@ -2268,7 +2297,7 @@ billAdress
 
   bottom: 80px;
   right: 20px;
-  width: 400px;
+  width: 278px;
   height: 600px;
   border-radius: 10px;
   overflow: hidden;

@@ -15,23 +15,18 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaBook } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
-import c5 from "../Images/close-up-hand-writing-notebook-top-view_23-2148888824.avif";
 import c6 from "../Images/home.avif";
 import { motion } from "framer-motion";
 import { fadeIn } from "../Compontes/anamation/variants";
 import { Footer } from "./Footer";
 import in1 from "../Images/team-1.jpg";
-import { FaPlayCircle } from "react-icons/fa";
-import { PiStudentBold } from "react-icons/pi";
 import { FaFacebookF } from "react-icons/fa";
-import in2 from "../Images/team-4.jpg";
-import in3 from "../Images/team-3.jpg";
+
 import { FaYoutube } from "react-icons/fa";
-import axios from "axios";
 import { useContext } from "react";
 import { StoreContext } from "../context/Storecontext";
 import { BiLogoGmail } from "react-icons/bi";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -319,7 +314,7 @@ export const Home = () => {
               >
                 <img src={c3} alt="" className="w-75" />
                 <div className="bg-light w-25 position-absolute my-1 px-1 mx-2 py-2 end-0 bottom-0 text-center text-courses  ">
-                  <h2>Graphic Design</h2>
+                  <h2>Python </h2>
                   <p>22 Courses</p>
                 </div>
               </motion.div>
@@ -334,7 +329,7 @@ export const Home = () => {
               >
                 <img src={c4} alt="" className="w-75" />
                 <div className="bg-light w-25 position-absolute my-1 px-1 mx-2 py-2 end-0 bottom-0 text-center text-courses  ">
-                  <h2>Graphic Design</h2>
+                  <h2>Back End</h2>
                   <p>44 Courses</p>
                 </div>
               </motion.div>
@@ -406,7 +401,7 @@ export const Home = () => {
                 <h2 className="fw-bold fs-1">Our Courses</h2>
               </motion.Col>
               <div className="row gap-5 d-flex align-items-center justify-content-center Courses-media">
-                {food_list.slice(0, 5).map((item) => {
+                {food_list.slice(0, 3).map((item) => {
                   return (
                     <Col lg="3" md="4" className="shadow-lg">
                       <div className="single__free__course">
@@ -414,14 +409,17 @@ export const Home = () => {
                           <Link to={`/coursedetails/${item.id}`}>
                             <img src={c6} alt="" className="w-100" />
                           </Link>
-                          <p className="mt-1 fw-bold position-absolute end-0 text-info">
+                          <p className="my-1 fw-bold position-absolute end-0 text-info">
                             {item.price} $
                           </p>
                         </div>
 
-                        <div className="free__course__details">
-                          <h6> Name: {item.name}</h6>
-                          <h6> OverView: {item.overView}</h6>
+                        <div className="free__course__details pt-1">
+                          <h5 className="my-3 fw-medium"> Name: {item.name}</h5>
+                          <h6 className="fw-light">
+                            {" "}
+                            OverView: {item.overView}
+                          </h6>
 
                           <div className=" d-flex align-items-center gap-5 justify-content-between mx-3">
                             <span className=" d-flex align-items-center gap-2">

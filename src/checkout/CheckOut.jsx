@@ -10,6 +10,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
+
 const CheckOut = () => {
   const [validated, setValidated] = useState(false);
 
@@ -31,10 +32,9 @@ const CheckOut = () => {
   };
 
   const onlogIn = async (event) => {
-    event.preventDefault();
-
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
+      event.preventDefault();
     }
 
     setValidated(true);
@@ -46,8 +46,7 @@ const CheckOut = () => {
         data
       );
       console.log(response.data.message);
-      if (response.data.message === "user add") {
-        console.log(response.data.message);
+      if (response.data) {
         navigate("/payment");
       } else {
         // التعامل مع الحالة عندما تكون القيمة false
