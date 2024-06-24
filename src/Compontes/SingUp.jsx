@@ -31,11 +31,12 @@ export const SingUp = () => {
       data
     );
     console.log(response.data);
+    console.log(response.data);
 
     if (response.data) {
       navigate("/login");
     } else {
-      toast.error("password week");
+      toast.error(response);
     }
   };
   useEffect(() => {

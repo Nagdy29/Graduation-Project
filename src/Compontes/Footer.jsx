@@ -21,15 +21,39 @@ export const Footer = () => {
                 class="footer-col"
               >
                 <h4 className="">E-Learing</h4>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
+                <ul class="navbar-nav ">
+                  <li class="nav-item">
+                    <Link class="nav-link " aria-current="page" to="/">
+                      <span className="pa-head">Home</span>
+                    </Link>
                   </li>
-                  <li>
-                    <Link to="/about">about us</Link>
+                  <li class="nav-item">
+                    <Link class="nav-link " aria-current="page" to="/about">
+                      <span className="pa-head">About</span>
+                    </Link>
                   </li>
-                  <li>
-                    <Link to="/courses">Courses</Link>
+
+                  <li class="nav-item">
+                    <Link class="nav-link " aria-current="page" to="/courses">
+                      <span className="pa-head">Courses</span>
+                    </Link>
+                  </li>
+
+                  <li class="nav-item">
+                    <Link
+                      class="nav-link "
+                      aria-current="page"
+                      to="/instructor
+"
+                    >
+                      <span className="pa-head">Instructor</span>
+                    </Link>
+                  </li>
+
+                  <li class="nav-item">
+                    <Link class="nav-link " aria-current="page" to="/contact">
+                      <span className="pa-head">Contact</span>
+                    </Link>
                   </li>
                 </ul>
               </motion.div>

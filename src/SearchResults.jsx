@@ -60,7 +60,7 @@ const SearchResults = () => {
                   <div className="free__course__details">
                     <div>
                       <div className="">
-                        <h2> course_title :</h2>
+                        <h4> course title :</h4>
                         <p>{item.course_title}</p>
                       </div>
                       <h6> level : {item.level}</h6>

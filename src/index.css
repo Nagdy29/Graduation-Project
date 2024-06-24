@@ -1681,9 +1681,9 @@ ul {
 
 /* catogrrry */
 .category-col {
-  width: 600px;
+  width: 639px;
   background: #fff;
-  height: 190px;
+  height: 285px;
   border-radius: 20px;
 }
 
@@ -1693,7 +1693,7 @@ ul {
 
 .category-col .p-catogry {
   color: #111;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .category-col .p-catogry:hover {
@@ -2239,4 +2239,80 @@ billAdress
 .Assignment-pro {
   border-bottom: 1px solid black;
   color: #06bbcc;
+}
+
+/* chatttt*/
+.App {
+  position: relative;
+}
+
+.chatbot-toggle-button {
+  z-index: 10000000000;
+  color: #06bbcc;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chatbot-toggle-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.chatbot-popup {
+  position: fixed;
+  z-index: 10000000000;
+
+  bottom: 80px;
+  right: 20px;
+  width: 400px;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-inner-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-message-container {
+  padding: 10px;
+  height: 513px;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chatbot-popup .react-chatbot-kit-chat-input button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #5ccc9d;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }

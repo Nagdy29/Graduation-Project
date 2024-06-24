@@ -2,7 +2,7 @@ import * as React from "react";
 import "react-slideshow-image/dist/styles.css";
 import h1 from "../../src/Images/new/home1.jpg";
 import h3 from "../../src/Images/new/h2.webp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Company } from "./Company";
 import { Container, Row, Col } from "reactstrap";
 import CountUp from "react-countup";
@@ -31,10 +31,29 @@ import axios from "axios";
 import { useContext } from "react";
 import { StoreContext } from "../context/Storecontext";
 import { BiLogoGmail } from "react-icons/bi";
+import { ToastContainer, toast } from "react-toastify";
 
 export const Home = () => {
-  const { persone_list, setpersone, url, food_list } = useContext(StoreContext);
+  const navigate = useNavigate();
 
+  const {
+    persone_list,
+    setpersone,
+    url,
+    food_list,
+    addcart,
+    cartItem,
+
+    token,
+  } = useContext(StoreContext);
+  const handleadd = (item) => {
+    if (token) {
+      addcart(item.id);
+      toast.success("add to cart");
+    } else {
+      navigate("/login");
+    }
+  };
   return (
     <>
       <div>
@@ -351,7 +370,7 @@ export const Home = () => {
                           to={`/insInfo/${item.id}`}
                           className="text-decoration-none name"
                         >
-                          {item.fname}
+                          {item.firstName} {item.lastName}
                         </Link>
                       </h4>
                     </div>
@@ -440,9 +459,23 @@ export const Home = () => {
                             </span>
 
                             <span className=" d-flex align-items-center gap-2 mb-2 p-2">
-                              <button className="btn btn-outline-info">
-                                ADD Cart
-                              </button>
+                              {!cartItem[item.id] ? (
+                                <button
+                                  className="btn btn-outline-info"
+                                  onClick={() => handleadd(item)}
+                                >
+                                  ADD Cart
+                                </button>
+                              ) : (
+                                <p>
+                                  {" "}
+                                  <Link to="/cart">
+                                    <button className="btn  btn-primary">
+                                      Go To Cart
+                                    </button>
+                                  </Link>
+                                </p>
+                              )}
                             </span>
                           </div>
                         </div>

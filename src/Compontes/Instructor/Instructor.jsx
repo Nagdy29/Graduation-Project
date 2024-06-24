@@ -121,7 +121,7 @@ const Instructor = () => {
                         to={`/insInfo/${item.id}`}
                         className="text-decoration-none name"
                       >
-                        {item.fname}
+                        {item.firstName} {item.lastName}
                       </Link>
                     </h4>
                   </div>

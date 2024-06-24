@@ -187,9 +187,7 @@ const CoursesDetails = () => {
           <div className="text-ourcourses  mx-4 my-5 row d-flex justify-content-center">
             <div className="col-md-5">
               <h1 className="fs-1 text-center mb-4 fw-bolder ">Overview</h1>
-              <h3 className="mb-4 fs-2 fw-medium">
-                Learn WordPress & Elementor for Beginners
-              </h3>
+              <h3 className="mb-4 fs-2 fw-medium">{data.overView}</h3>
               <h4 className="mb-3 fs-3 fw-normal">Why Choose This Course</h4>
               <p className="w-75 ">
                 These courses are perfectly simple and easy to distinguish. In a

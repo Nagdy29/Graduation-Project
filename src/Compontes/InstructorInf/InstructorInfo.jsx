@@ -103,7 +103,10 @@ const InstructorInfo = () => {
             <div className="col-xl-6 col-md-6 col-12 d-flex my-3 instr-info position-relative">
               <div className="d-flex text-center head-infoInstr">
                 <div className="d-flex flex-column mx-2">
-                  <h3 className="fs-2 fw-bold"> {data.fname} </h3>
+                  <h3 className="fs-2 fw-bold">
+                    {" "}
+                    {data.firstName} {data.lastName}{" "}
+                  </h3>
                   <p className="fw-normal">{data.jobTitle}</p>
                 </div>
                 <div className="d-flex flex-column mx-5 ">

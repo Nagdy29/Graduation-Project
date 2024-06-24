@@ -13,8 +13,6 @@ import Row from "react-bootstrap/Row";
 const CheckOut = () => {
   const [validated, setValidated] = useState(false);
 
-  // yup validite
-
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -33,24 +31,30 @@ const CheckOut = () => {
   };
 
   const onlogIn = async (event) => {
+    event.preventDefault();
+
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
     }
 
     setValidated(true);
 
-    const response = await axios.post(
-      `https://paymentt.onrender.com/cash/add`,
-      data
-    );
-    console.log(response.data);
+    try {
+      const response = await axios.post(
+        "https://paymentt.onrender.com/cash/add",
 
-    if (response.data.success) {
-      navigate("/payment");
-    } else {
-      toast.error(response.data.message);
+        data
+      );
+      console.log(response.data.message);
+      if (response.data.message === "user add") {
+        console.log(response.data.message);
+        navigate("/payment");
+      } else {
+        // التعامل مع الحالة عندما تكون القيمة false
+        console.log("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting data", error);
     }
   };
   useEffect(() => {
@@ -226,6 +230,7 @@ const CheckOut = () => {
                       feedbackType="invalid"
                     />
                   </Form.Group>
+
                   <Button type="submit" className="my-lg-5">
                     Submit form
                   </Button>

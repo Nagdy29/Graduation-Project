@@ -22,6 +22,7 @@ import { StoreContext } from "./context/Storecontext";
 import React, { useContext, useEffect } from "react";
 import Payment from "./Compontes/Payment/Payment";
 import SearchResults from "./SearchResults";
+import Chatbott from "./chatboot/Chat";
 
 function App() {
   const { token, setToken, instData, userData, setinstData, setUserData } =
@@ -38,9 +39,10 @@ function App() {
   }, []);
   return (
     <>
-      <div>
+      <div className="app">
         <ToastContainer />
         <Navbaar />
+        <Chatbott />
 
         <Routes>
           <Route path="/" element={<Home />} />
