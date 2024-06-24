@@ -26,7 +26,7 @@ const LogInfo = () => {
     const response = await axios.post(`${url}/api/inst/login`, data);
     if (response.data.success) {
       setinstData(response.data);
-      console.log(response.data);
+      // console.log(response.data);
       setToken(response.data.token);
       localStorage.setItem("token", response.data.token);
       navigate("/");
@@ -35,7 +35,7 @@ const LogInfo = () => {
     }
   };
   useEffect(() => {
-    console.log(data);
+    // console.log(data);
   }, []);
   return (
     <>

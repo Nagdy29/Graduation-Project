@@ -31,7 +31,7 @@ export const Login = () => {
 `,
       data
     );
-    console.log(response.data);
+    // console.log(response.data);
     if (response.data) {
       setUserData(response.data);
 
