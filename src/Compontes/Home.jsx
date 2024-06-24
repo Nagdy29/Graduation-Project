@@ -26,7 +26,7 @@ import { FaYoutube } from "react-icons/fa";
 import { useContext } from "react";
 import { StoreContext } from "../context/Storecontext";
 import { BiLogoGmail } from "react-icons/bi";
-import {  toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -183,8 +183,8 @@ export const Home = () => {
                               <CountUp
                                 start={0}
                                 end={25}
-                                duration={4}
-                                suffix="K"
+                                duration={5}
+                                suffix=""
                               />
                             </span>
 
@@ -196,8 +196,8 @@ export const Home = () => {
                               <CountUp
                                 start={0}
                                 end={12}
-                                duration={4}
-                                suffix="M"
+                                duration={6}
+                                suffix=""
                               />
                             </span>
 
@@ -213,8 +213,8 @@ export const Home = () => {
                               <CountUp
                                 start={0}
                                 end={95}
-                                duration={4}
-                                suffix="M"
+                                duration={6}
+                                suffix=""
                               />
                             </span>
 
@@ -226,8 +226,8 @@ export const Home = () => {
                               <CountUp
                                 start={0}
                                 end={5}
-                                duration={4}
-                                suffix="K"
+                                duration={5}
+                                suffix=""
                               />
                             </span>
 

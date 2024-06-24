@@ -95,7 +95,7 @@ export const About = () => {
                               start={0}
                               end={25}
                               duration={4}
-                              suffix="K"
+                              suffix=""
                             />
                           </span>
 
@@ -107,8 +107,8 @@ export const About = () => {
                             <CountUp
                               start={0}
                               end={12}
-                              duration={4}
-                              suffix="M"
+                              duration={5}
+                              suffix=""
                             />
                           </span>
 
@@ -122,8 +122,8 @@ export const About = () => {
                             <CountUp
                               start={0}
                               end={95}
-                              duration={4}
-                              suffix="M"
+                              duration={6}
+                              suffix=""
                             />
                           </span>
 
@@ -132,12 +132,7 @@ export const About = () => {
 
                         <div className="single__counter">
                           <span className="counter">
-                            <CountUp
-                              start={0}
-                              end={5}
-                              duration={4}
-                              suffix="K"
-                            />
+                            <CountUp start={0} end={5} duration={6} suffix="" />
                           </span>
 
                           <p className="counter__title">Categories Served</p>
